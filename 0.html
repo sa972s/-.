@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هلال رمضان</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(to right, #fff, #ffcc66);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden; 
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            font-size: 20px;
+            color: #555;
+            animation: scroll-text 10s linear infinite; 
+        }
+
+        @keyframes scroll-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .images-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .image-box {
+            width: 18%;
+            background-color: #fef8e4;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-box:hover {
+            transform: scale(1.1) rotate(5deg); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box a {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+
+        .image-box a:hover img {
+            transform: scale(1.1)
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        footer:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+        }
+
+        footer p {
+            font-size: 18px;
+        }
+
+        footer a {
+            color: #ffcc66;
+            text-decoration: none;
+        }
+
+        
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: scrollEffect 1s forwards;
+        }
+
+        @keyframes scrollEffect {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>هلال رمضان</h1>
+    <div class="marquee-container">
+        <p class="marquee-text">اللهم اجعل رمضان هذا العام مباركاً علينا وعلى جميع المسلمين. اللهم تقبل منا صالح الأعمال.</p>
+    </div>
+</header>
+
+<div class="images-section">
+    <div class="image-box scroll-animation">
+        <a href="1.html">
+            <img src="صورة 1.PNG" alt="العد التنازلي لشهر رمضان">
+        </a>
+        <p>العد التنازلي لشهر رمضان</p>
+    </div>
+    <div class="image-box scroll-animation">
+        <a href="2.html">
+            <img src="Slide2.PNG" alt="خطة دراسية لشهر رمضان">
+        </a>
+        <p>خطة دراسية لشهر رمضان</p>
+    </div>
+    <div class="image-box scroll-animation">
+        <a href="3.html">
+            <img src="Slide3.PNG" alt="القرآن الكريم وأذكار الصباح والمساء">
+        </a>
+        <p>القرآن الكريم وأذكار الصباح والمساء</p>
+    </div>
+    <div class="image-box scroll-animation">
+        <a href="4.html">
+            <img src="Slide4.PNG" alt="توقيت الأذان في عبري">
+        </a>
+        <p>توقيت الأذان في عبري</p>
+    </div>
+    <div class="image-box scroll-animation">
+        <a href="5.html">
+            <img src="Slide5.PNG" alt="قائمة البرامج الدينية">
+        </a>
+        <p>قائمة البرامج الدينية</p>
+    </div>
+</div>
+
+<footer>
+    <p>تم تصميم هذا الموقع بواسطة سيف سليمان حمد المزروعي</p>
+    <p>تواصل معنا: <a href="tel:+72025286">72025286</a> | <a href="mailto:ssiy77uda@gmail.com">ssiy77uda@gmail.com</a></p>
+    <p>©جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>

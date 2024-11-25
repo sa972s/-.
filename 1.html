@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عداد تنازلي - رمضان</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          color: #fff;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: #1a1a1a;
+      }
+
+      
+      nav {
+          width: 100%;
+          background-color: #333;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+      }
+
+      nav a {
+          float: right;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          font-size: 18px;
+      }
+
+      nav a:hover {
+          background-color: #66ff66;
+          color: black;
+      }
+
+      h1 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: #66ff66;
+          text-shadow: 2px 2px 4px #000;
+          margin-top: 70px; 
+      }
+
+      .countdown-box {
+          display: inline-block;
+          padding: 30px 20px;
+          border: 2px solid #66ff66;
+          border-radius: 15px;
+          background: rgba(0, 0, 0, 0.7);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+          width: 300px;
+      }
+
+      .countdown {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #66ff66;
+          text-shadow: 1px 1px 3px #000;
+      }
+
+      .countdown span {
+          display: block;
+          margin: 10px 0;
+      }
+
+      footer {
+          position: absolute;
+          bottom: 10px;
+          font-size: 0.9rem;
+          color: #66ff66;
+          text-shadow: 1px 1px 2px #000;
+      }
+  </style>
+</head>
+<body>
+
+
+<nav>
+    <a href="0.html">الرئيسية</a>
+    <a href="1.html">العد التنازلي لشهر رمضان</a>
+    <a href="2.html">خطة دراسية لشهر رمضان</a>
+    <a href="3.html">القرآن الكريم وأذكار الصباح والمساء</a>
+    <a href="4.html">توقيت الأذان</a>
+    <a href="5.html">قائمة البرامج الدينية</a>
+</nav>
+
+  <h1>العد التنازلي لشهر رمضان</h1>
+  <div class="countdown-box">
+      <div class="countdown" id="countdown">
+          <span>تحميل...</span>
+      </div>
+  </div>
+
+  <footer>
+      <p>حقوق النشر © 2024 - هلال رمضان</p>
+  </footer>
+
+  <script>
+      const targetDate = new Date('2025-03-01T00:00:00');
+
+      function updateCountdown() {
+          const now = new Date();
+          const diff = targetDate - now;
+
+          if (diff <= 0) {
+              document.getElementById('countdown').innerHTML = "<span>انتهى الوقت!</span>";
+              return;
+          }
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          document.getElementById('countdown').innerHTML = `
+              <span>${days} يوم</span>
+              <span>${hours} ساعة</span>
+              <span>${minutes} دقيقة</span>
+              <span>${seconds} ثانية</span>
+          `;
+      }
+
+      setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
